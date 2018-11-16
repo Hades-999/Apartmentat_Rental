@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <script>
+  var modal = document.getElementById('id01');
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+      var modal = document.getElementById('id02');
+      window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+          }
+      }
+	  var modal = document.getElementById('id03');
+      window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+          }
+      }
+  };
+  function fun1()
+  {
+      var z = document.forms["signup"]["acctype"].value;
+    
+    if(z=="Tenant"){
+        window.open("tenant_form.html","_self");
+    }
+    else if(z=="Landlord"){
+        window.open("Landlord_form.html","_self");
+    }
+  }
+  </script>
+  <div>
+    <div align="left">
+        <h1>SiteName</h1>
+    </div>
+<div align="right">
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+<button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Sign Up</button>
+</div>
+</div>
+<div id="id02" class="modal">
+  <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content animate" action="" method="post" name="signup">
+    <div class="container">
+      <h1>Sign Up</h1>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+      <label><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="password" required>
+      <label><b>Name</b></label>
+      <input type="text" placeholder="Enter Name" name="username" required>
+      <label><b>Account type</b></label><br>
+      <input type="radio" name="acctype" value="Tenant" checked>Tenant<br>
+      <input type="radio" name="acctype" value="Landlord">Landlord<br>
+      <div class="clearfix">
+          <button type="submit" name ="register" class="signupbtn" value="next" onclick="fun1()">Next</button>	
+
+        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+        </div>
+    </div>
+  </form>
+</div>
+  <div id="id01" class="modal">
+	<form class="modal-content animate" action="login.java">
+	  <div class="container">
+		<label for="username"><b>Username</b></label>
+		<input type="text" placeholder="Enter username" name="username" required>
+		<label for="password"><b>Password</b></label>
+		<input type="password" placeholder="Enter Password" name="password" required>
+		<button type="submit" name="submit">Login</button>
+                <label>
+			<input type="checkbox" checked="checked" name="remember"> Remember me
+		</label>
+	  </div>
+	  <div class="container" style="background-color:#f1f1f1">
+		<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+		<span class="psw">Forgot <a href="#">password?</a></span>
+	  </div>
+    </form>
+</div>
+
+ <div id="id03" class="modal">
+  <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content animate" action="" method="post" name="signup">
+    <div class="container">
+      <h1>Sign Up</h1>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+      <label><b>Current Address</b></label>
+      <input type="text" placeholder="Enter Current Address" name="curr_add" required>
+      <label><b>Age</b></label>
+      <input type="text" placeholder="Enter Age" name="age" required>
+      <label><b>Gender</b></label>
+      <input type="radio" name="gender" value="Male" checked>Male<br>
+      <input type="radio" name="gender" value="Female">Female<br>
+      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+      <div class="clearfix">
+          <button type="submit" name ="register" class="signupbtn" value="next" onclick="window.open('index.html','_self')">Sign Up</button>	
+
+        <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Cancel</button>
+        </div>
+    </div>
+  </form>
+</div> 
+  <div id="id04" class="modal">
+  <span onclick="document.getElementById('id04').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content animate" action="" method="post" name="signup">
+    <div class="container">
+      <h1>Sign Up</h1>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+      <label><b>Current Address</b></label>
+      <input type="text" placeholder="Enter Current Address" name="curr_add" required>
+      <label><b>Age</b></label>
+      <input type="text" placeholder="Enter Age" name="age" required>
+      <label><b>Gender</b></label>
+      <input type="radio" name="gender" value="Male" checked>Male<br>
+      <input type="radio" name="gender" value="Female">Female<br>
+      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+      <div class="clearfix">
+          <button type="submit" name ="register" class="signupbtn" value="next" onclick="window.open('index.html','_self')">Sign Up</button>	
+
+        <button type="button" onclick="document.getElementById('id04').style.display='none'" class="cancelbtn">Cancel</button>
+        </div>
+    </div>
+  </form>
+</div>
+  <div>
+  <ul>
+    <li><a class="active" href="#home">Home</a></li>
+    <li><a href="#"></a></li>
+    <li><a href="#"></a></li>
+    <li><a href="#"></a></li>
+  </ul>
+</div>
+  
+    </body>
+</html>
