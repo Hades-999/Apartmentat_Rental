@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Welcome</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div>
+            <div align="left">
+                <h1>Apartment Rentals</h1>
+            </div>
+            <div align="right">
+                <button onclick="window.location.href='index.html'" style="width:auto;">Logout</button>
+            </div>
+        </div>
+        <div>
+            <form action="Retrieval" method="post" name="Search">
+                <ul>
+                    <li><a class="active" href="index.html">Home</a></li>
+                    <li><input type="text" placeholder="Enter Location" name="location"></li>
+                    <li><input type="text" placeholder="Min Rent" name="min"></li>
+                    <li><input type="text" placeholder="Max Rent" name="max"></li>
+                    <li><button type="submit" name="search" class="signupbtn" value="go">GO</button></li>
+                </ul>
+            </form>
+        </div>
+        <form action="Apartments" method="post" name="apartment">
+        <div class="container">
+            <p>Interested in Putting up someplace on rent?</p>
+            <hr>
+            <label><b>Property address</b></label>
+            <input type="text" placeholder="Enter Property address" name="prop_add" required>
+            <label><b>Property type</b></label>
+            <input type="text" placeholder="Enter Property type" name="prop_type" required>
+            <label><b>Type(s) of apartments available:</b></label>
+            <input type="text" placeholder="Enter types" name="ap_type" required>
+            <label><b>Enter Price:</b></label>
+            <input type="text" placeholder="Enter Price" name="price" required>
+            <p>While posting this notice you are fully aware of our terms <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+            <div class="clearfix">
+                 <button type="submit" name ="post_notice" class="signupbtn" value="post_notice">Post</button>
+            </div>
+        </div>
+        </form>
+    </body>
+</html>
